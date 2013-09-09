@@ -1,0 +1,106 @@
+<h1>Fake Domain Detective</h1>
+<h3 style="color: #b94a48;">[% ErrToken %] </h3>
+<form style="text-align: center;" name="likedomain" action="/cgi-bin/likeDomainDetective.pl" method="post">
+<div id="groupEmail" class="control-group [% FlagEmail %]">
+  <div class="input-prepend">
+    <span class="add-on" style="width: 120px;">E-mail <b style="color: #DD6600;">*</b></span>
+    <input class="span6" type="email" id="email" name="email" placeholder="Email" value="[% email %]">
+  </div>
+  <span class="help-block">You will be emailed the results once the test is completed.</span>
+  <span class="Error">[% ErrEmail %] </span>
+  </div>
+  <br>
+  <div id="groupDomain" class="control-group [% FlagDomain %]">
+  <div class="input-prepend">
+    <span class="add-on" style="width: 120px;">Domain <b style="color: #DD6600;">*</b></span>
+    <input class="span6" type="text" id="domain" name="domain" placeholder="accessnow.org" value="[% $domain %]">
+  </div>
+  <span class="help-block">If the domain name you are interested in testing is composed of two or more words, use CamelCase to input the domain's URL, e.g. SahamNews.org.</span>
+  <span class="Error">[% ErrDomain %]</span>
+  </div>
+  <br>
+  <div id="groupKw" class="control-group [% FlagKw %]">
+  <div class="input-prepend">
+    <span class="add-on" style="width: 120px;">Keyword</span>
+    <input class="span6" type="text" id="kw" name="kw" placeholder="Keyword" value="[% kw %]">
+  </div>
+  <span class="help-block">Add one keyword you think would help the lookup, e.g. Iran.</span>
+  <span class="Error">[% $ErrKw %]</span>
+  </div>
+  <br>
+  
+  <table class="table" id="table">
+    <caption><b>Top level domain (TLD) to search:</b></caption>
+    <span class="Error">[% ErrTld %]</span>
+    <tr>
+      <td>
+      <input type="checkbox" name="tld" value="com"> com
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="net"> net
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="org"> org
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="edu"> edu
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="gov"> gov
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <input type="checkbox" name="tld" value="uk"> uk
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="us"> us
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="de"> de
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="jp"> jp
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="fr"> fr
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <input type="checkbox" name="tld" value="au"> au
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="ca"> ca
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="ch"> ch
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="ru"> ru
+      </td>
+      <td>
+      <input type="checkbox" name="tld" value="it"> it
+      </td>
+    </tr>
+  </table>
+  <a class="btn btn-primary pull-left" onclick="addFields()" id="add">More TLDs <i class="icon icon-plus icon-white"></i></a>
+  <br><br>
+  <div class="control-group">
+    <div class="controls">	
+	  <input name="token" type="hidden" value="[% newToken %]">
+      <button class="btn btn-primary" type="submit">Lookup <i class="icon icon-search icon-white"></i></button>
+    </div>
+  </div>
+</form>
+<script type="text/javascript">
+$("#email").focus(function() {
+$("#groupEmail").removeClass("error").removeClass("success");
+});
+$("#domain").focus(function() {
+$("#groupDomain").removeClass("error").removeClass("success");
+});
+$("#kw").focus(function() {
+$("#groupKw").removeClass("error").removeClass("success");
+});
+</script>

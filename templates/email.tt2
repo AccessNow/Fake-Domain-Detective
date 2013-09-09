@@ -1,0 +1,38 @@
+<p>
+  Please find the results of your Fake Domain Detective query below.
+  <br>
+  These results are domain names with similar names to <b>[% domain %].[% originTld %]</b> on the top-level domains you selected.
+  <br><br>
+  <b>Domain</b> is a permutation of the domain name you searched for.
+  <br>
+  <b>IP Address</b> is the internet location of the server hostingthe content.
+  <br>
+  <b>Web Response</b> is the response the server of an existing domain provided to our tool. See the 
+  <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">this wikipedia page</a> for further details.
+  <br>
+</p>
+<table style="font-size:14px;color:#333333;border-width: 1px;border-color: #000;border-collapse: collapse;">
+  <tbody>
+    <th style="background:#D2C2D2;border-width: 1px;padding: 8px;border-style: solid;border-color: #333333;">
+      <th>Domain</th>
+      <th>IP Address</th>
+      <th>Web Response</th>
+      <th>Last Lookup</th>
+    </th>
+    [% FOREACH entry IN entries -%]
+      [% IF loop.count mod 2 == 0 -%]
+	<tr style="background:#AAFFAA;">
+      [% ELSE -%]
+	<tr style="background:#88DD88;">
+      [% END -%]
+	[% FOREACH item IN entry -%]
+	  <td style="border-width: 1px;padding: 12px;border-style: solid;border-color: #333333;">[% item %]</td>
+	[% END -%]
+      </tr>
+    [% END -%]
+  </tbody>
+</table>
+<p>
+  <a href="fakedomains.accessnow.org">Fake Domain Detective</a> is a tool built by <a href="accessnow.org">Access</a>, an international human rights organization that fights for the digital rights of users at risk around the world. For feedback on this tool, please email
+  <a href="mailto:reports@accessnow.org">reports@accessnow.org</a>.
+</p> 

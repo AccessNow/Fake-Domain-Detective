@@ -1,0 +1,13 @@
+<h1 style="color: #468847;">Your request has been sent successfully!</h1>
+<br><br>
+<p style="font-size:32px; line-height: 32px;">
+You are #<b>[% queue %]</b> in the queue.
+<br><br>
+The result will be sent to <b>[% email %]</b> within the next <b>[% time %]</b> minutes.
+<br><br>
+If you think you have found a fake domain of a civil society or media website, let us know at 
+<a href="mailto:reports@accessnow.org">reports@accessnow.org</a>. Thank you!
+<br>
+<a class="btn btn-primary pull-left" href="/cgi-bin/likeDomainDetective.pl" id="add">Back <i class="icon icon-circle-arrow-left icon-white"></i></a>	  
+</p>
+	  
