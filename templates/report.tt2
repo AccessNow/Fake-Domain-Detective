@@ -1,6 +1,16 @@
 <h1>Report a Fake Domain</h1>
-<h3 style="color: #b94a48;">[% ErrToken %] </h3>
-<h3 style="color: #b94a48;">[% flash %] </h3>
+  [% IF ErrToken -%]
+    <div class="alert alert-error">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>[% ErrToken %]</strong>
+    </div>
+  [% END -%]
+  [% IF flash -%]
+    <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>[% flash %]</strong>
+    </div>
+  [% END -%]
 <form style="text-align: center;" name="likedomain" action="/cgi-bin/report.pl" method="post">
   <div id="groupEmail" class="control-group [% FlagEmail %]">
     <div class="input-prepend">
@@ -31,7 +41,7 @@
   <div class="control-group">
     <div class="controls">	
 	  <input name="token" type="hidden" value="[% newToken %]">
-      <button class="btn btn-primary" type="submit">Report <i class="icon icon-search icon-white"></i></button>
+      <button class="btn btn-primary" type="submit">Report <i class="icon icon-ban-circle icon-white"></i></button>
     </div>
   </div>
 </form>

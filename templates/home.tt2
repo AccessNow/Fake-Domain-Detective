@@ -1,5 +1,10 @@
 <h1>Fake Domain Detective</h1>
-<h3 style="color: #b94a48;">[% ErrToken %] </h3>
+[% IF ErrToken -%]
+  <div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>[% ErrToken %]</strong>
+  </div>
+[% END -%]
 <form style="text-align: center;" name="likedomain" action="/cgi-bin/likeDomainDetective.pl" method="post">
 <div id="groupEmail" class="control-group [% FlagEmail %]">
   <div class="input-prepend">
