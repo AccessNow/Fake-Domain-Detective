@@ -1,5 +1,6 @@
 <h1>Report a Fake Domain</h1>
-<br>
+<h3 style="color: #b94a48;">[% ErrToken %] </h3>
+<h3 style="color: #b94a48;">[% flash %] </h3>
 <form style="text-align: center;" name="likedomain" action="/cgi-bin/report.pl" method="post">
   <div id="groupEmail" class="control-group [% FlagEmail %]">
     <div class="input-prepend">
@@ -12,7 +13,7 @@
   <div id="groupFDomain" class="control-group [% FlagFDomain %]">
     <div class="input-prepend">
       <span class="add-on" style="width: 120px;">Fake Domain <b style="color: #DD6600;">*</b></span>
-      <input class="span6" type="text" id="fdomain" name="domain" placeholder="Fake.com" value="[% $fdomain %]" required>
+      <input class="span6" type="text" id="fdomain" name="fdomain" placeholder="Fake.com" value="[% fdomain %]" required>
     </div>
     <span class="help-block">The Domain you suspect to be a fake.</span>
     <span class="Error">[% ErrFDomain %]</span>
@@ -20,12 +21,12 @@
   <div id="groupDomain" class="control-group [% FlagDomain %]">
     <div class="input-prepend">
       <span class="add-on" style="width: 120px;">Original Domain <b style="color: #DD6600;">*</b></span>
-      <input class="span6" type="text" id="domain" name="domain" placeholder="Original.com" value="[% $domain %]" required>
+      <input class="span6" type="text" id="domain" name="domain" placeholder="Original.com" value="[% domain %]" required>
     </div>
     <span class="help-block">The targeted Domain.</span>
     <span class="Error">[% ErrDomain %]</span>
   </div>
-  <div style="vertical-align: bottom;" ><input type="checkbox" name="notsure" value="1"> I am not sure which is the fake domain.</div>
+  <div style="vertical-align: bottom;" ><input type="checkbox" name="sure" value="1"> I am not sure which is the fake domain.</div>
   <br>
   <div class="control-group">
     <div class="controls">	
