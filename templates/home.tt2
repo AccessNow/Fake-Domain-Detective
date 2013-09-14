@@ -4,7 +4,7 @@
 <div id="groupEmail" class="control-group [% FlagEmail %]">
   <div class="input-prepend">
     <span class="add-on" style="width: 120px;">E-mail <b style="color: #DD6600;">*</b></span>
-    <input class="span6" type="email" id="email" name="email" placeholder="Email" value="[% email %]">
+    <input class="span6" type="email" id="email" name="email" placeholder="Email" value="[% email %]" required>
   </div>
   <span class="help-block">You will be emailed the results once the test is completed.</span>
   <span class="Error">[% ErrEmail %] </span>
@@ -13,7 +13,7 @@
   <div id="groupDomain" class="control-group [% FlagDomain %]">
   <div class="input-prepend">
     <span class="add-on" style="width: 120px;">Domain <b style="color: #DD6600;">*</b></span>
-    <input class="span6" type="text" id="domain" name="domain" placeholder="AccessNow.org" value="[% $domain %]">
+    <input class="span6" type="text" id="domain" name="domain" placeholder="AccessNow.org" value="[% $domain %]" required>
   </div>
   <span class="help-block">If the domain name you are interested in testing is composed of two or more words, use CamelCase to input the domain's URL, e.g. SahamNews.org.</span>
   <span class="Error">[% ErrDomain %]</span>
