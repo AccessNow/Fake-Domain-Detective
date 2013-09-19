@@ -14,26 +14,26 @@
 <form style="text-align: center;" name="likedomain" action="/cgi-bin/report.pl" method="post">
   <div id="groupEmail" class="control-group [% FlagEmail %]">
     <div class="input-prepend">
-      <span class="add-on" style="width: 120px;">Reporter Email </span>
+      <span class="add-on" style="width: 120px;">Your Email </span>
       <input class="span6" type="email" id="email" name="email" placeholder="Email" value="[% email %]">
     </div>
-    <span class="help-block">You can anonymously report a fake domain by keeping this field blank.</span>
+    <span class="help-block">If you would like us to be able to contact you about the fake domain, please add an email address where we can reach you. You can anonymously report a fake domain by keeping this field blank.</span>
     <span class="Error">[% ErrEmail %] </span>
   </div>
   <div id="groupFDomain" class="control-group [% FlagFDomain %]">
     <div class="input-prepend">
       <span class="add-on" style="width: 120px;">Fake Domain <b style="color: #DD6600;">*</b></span>
-      <input class="span6" type="text" id="fdomain" name="fdomain" placeholder="Fake.com" value="[% fdomain %]" required>
+      <input class="span6" type="text" id="fdomain" name="fdomain" placeholder="FakeDomain.net" value="[% fdomain %]" required>
     </div>
-    <span class="help-block">The Domain you suspect to be a fake.</span>
+    <span class="help-block">The domain (website, social media account) you suspect to be a fake.</span>
     <span class="Error">[% ErrFDomain %]</span>
   </div>
   <div id="groupDomain" class="control-group [% FlagDomain %]">
     <div class="input-prepend">
       <span class="add-on" style="width: 120px;">Original Domain <b style="color: #DD6600;">*</b></span>
-      <input class="span6" type="text" id="domain" name="domain" placeholder="Original.com" value="[% domain %]" required>
+      <input class="span6" type="text" id="domain" name="domain" placeholder="OriginalDomain.com" value="[% domain %]" required>
     </div>
-    <span class="help-block">The targeted Domain.</span>
+    <span class="help-block">The targeted domain.</span>
     <span class="Error">[% ErrDomain %]</span>
   </div>
   <div style="vertical-align: bottom;" ><input type="checkbox" name="sure" value="1"> I am not sure which is the fake domain.</div>

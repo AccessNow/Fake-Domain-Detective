@@ -4,18 +4,18 @@
   [% IF email -%]
     [% email %]
   [% ELSE -%]
-    An anonym user
+    An anonymous user
   [% END -%]
-  is suspecting the existance of a fake domain.
+  has reported the existence of a potential fake domain.
   <br>
-  According to him 
+  They believe 
   [% IF sure -%]
     <b>[% domain %]</b> has a fake domain <b style="color: ##C05000;">[% fdomain %]</b>.
   [% ELSE -%]
     <b style="color: ##C05000;">[% domain %]</b> and <b style="color: ##C05000;">[% fdomain %]</b> are similar and one of them might be a fake domain of the other.
   [% END -%]
   <br>
-  Reported on [% time %] server time.
+  This was reported at [% time %] server time.
   <br><br><br>
-  <em style="font-size: 9px;">This E-mail is sent by <a href="fakedomains.accessnow.org">Fake Domain Detective</a> a tool built by <a href="accessnow.org">Access</a>.</em>
+  <em style="font-size: 9px;">This E-mail is sent by <a href="fakedomains.accessnow.org">Fake Domain Detective</a> a tool built by <a href="www.accessnow.org">Access</a>.</em>
 </p> 
