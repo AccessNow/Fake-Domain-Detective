@@ -5,6 +5,9 @@
     <strong>[% ErrToken %]</strong>
   </div>
 [% END -%]
+<p>Welcome to the <b>Fake Domain Detective</b>, a tool created by <a href="https://www.accessnow.org">Access</a> to help civil society organizations and individuals find fake websites that may be impersonating them. For more information on fake domains, please see <a href="https://www.accessnow.org/blog/2013/08/01/one-of-these-things-is-not-like-the-other-report-on-fake-domains-attacks-on">our blogpost</a> and <a href="https://www.accessnow.org/page/-/docs/Access%20Tech/FakeDomainsReport.pdf">our report</a> on the subject.</p>
+<p>Using the form below, you can submit a domain to receive a list of other domains with similar names -- or the same name on different top level domains (TLDs). Our script will run on the TLDs you have selected (currently capped at 10 TLDs to reduce the wait time for the script to finish) and then send you an email with the results. If you find a suspicious domain, you can report the domain with our <a href="http://fakedomains.accessnow.org/cgi-bin/report.pl">Report a Fake Domain form</a>, also found in the navigation bar on the top of this page.</p>
+<p>If you have any questions, feature requests, or find any bugs, you can contact us at reports@accessnow.org or file an issue on <a href="https://github.com/AccessNow/Fake-Domain-Detective">GitHub</a>.
 <form style="text-align: center;" name="likedomain" action="/cgi-bin/likeDomainDetective.pl" method="post">
 <div id="groupEmail" class="control-group [% FlagEmail %]">
   <div class="input-prepend">
@@ -35,7 +38,7 @@
   <br>
   
   <table class="table" id="table">
-    <caption><b>Top level domain (TLD) to search:</b></caption>
+    <caption><b>Top level domains (TLDs) to search (please select at most 10):</b></caption>
     <span class="Error">[% ErrTld %]</span>
     <tr>
       <td>
